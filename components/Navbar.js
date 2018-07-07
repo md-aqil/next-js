@@ -3,36 +3,28 @@ import Link from 'next/link';
 const Navbar = () => (
 
 		<div>
-        <ul>
-		
-			<li> <Link href="/"><a> Home </a></Link> </li>
-			<li> <Link href="about"><a> About </a></Link> </li>
-    
-		</ul>
+				<nav className="navbar navbar-expand-lg navbar-dark bg-primary ">
+				<div className="container">
+					<a className="navbar-brand" href="#">Navbar</a>
+					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+						<span className="navbar-toggler-icon"></span>
+					</button>
 
-		<style jsx>{`
-
-			ul {
-				padding:20px 0;
-				display:flex;
-				background: #000;
-				color:#fff;
-				margin:0;
-			}
-
-			ul li {
-				list-style:none;
-
-			}
-			ul li a {
-				color:#fff;
-				text-decoration:none;
-				margin-left: 20px;
-			}
-		
-		`}</style>
-
-		
+					<div className="collapse navbar-collapse" id="navbarColor01">
+						<ul className="navbar-nav mr-auto">
+						<li className="nav-item active">
+							<Link href="/"><a className="nav-link">Home <span className="sr-only">(current)</span></a></Link>
+						</li>
+						<li className="nav-item">
+							<Link href="/about"><a className="nav-link">Features</a></Link>
+						</li>
+						
+						</ul>
+						
+					</div>
+				</div>
+			
+			</nav>
 		</div>
 
 ); 
